@@ -1,16 +1,11 @@
 import boto3
 
 s3 = boto3.resource('s3')
-s3.Bucket('python-codes').delete_objects
-(
-    bucket.delete_objects
-    (
-    Delete=
+s3.Bucket('python-codes').delete_objects(
+Delete={
+    'Objects': [
         {
-        'Objects': [
-            {
-                'Key': 'novoArquivo.txt'
-            }]
-        }
-    )
+            'Key': 'novoArquivo.txt'
+        }]
+    }
 )
